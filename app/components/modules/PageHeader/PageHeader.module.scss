@@ -1,0 +1,32 @@
+@import "@styles/variables.scss";
+
+.PageHeader {
+  grid-area: app;
+  z-index: $zPageHeader;
+  height: $headerHeight;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #adc9d7;
+
+  .menuButton {
+    @media (min-width: $desktopMinBreakpoint) {
+      display: none;
+    }
+  }
+
+  .spacer {
+    width: 2.5rem;
+
+    @media (min-width: $desktopMinBreakpoint) {
+      display: none;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    flex-grow: 1;
+  }
+}

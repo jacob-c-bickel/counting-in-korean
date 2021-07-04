@@ -1,0 +1,17 @@
+@import "@styles/variables.scss";
+
+.PageContent {
+  grid-area: app;
+  margin: $headerHeight auto 0 auto;
+  padding: 0 0.5rem;
+  width: 100%;
+  max-width: $mobileMaxContentWidth;
+
+  background-color: #84aec2;
+
+  overflow-y: scroll;
+
+  @media (min-width: $desktopMinBreakpoint) {
+    max-width: $desktopMaxContentWidth;
+  }
+}

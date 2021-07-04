@@ -1,0 +1,55 @@
+@import "@styles/variables.scss";
+
+.Menu {
+  grid-area: app;
+  z-index: $zMenu;
+  width: 14rem;
+
+  border-radius: 0 1rem 1rem 0;
+  background-color: #5b94ae;
+
+  transition: transform 0.25s;
+
+  @media (max-width: $mobileMaxBreakpoint) {
+    &.hidden {
+      transform: translate(-100%);
+    }
+
+    &.removed {
+      * {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $desktopMinBreakpoint) {
+    grid-area: menu;
+  }
+}
+
+.MenuBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: $zMenuBg;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: hsla(0, 0%, 0%, 0.75);
+
+  transition: opacity 0.25s;
+
+  @media (max-width: $mobileMaxBreakpoint) {
+    &.hidden {
+      opacity: 0;
+    }
+
+    &.removed {
+      transform: translate(-100%);
+    }
+  }
+
+  @media (min-width: $desktopMinBreakpoint) {
+    display: none;
+  }
+}
