@@ -1,0 +1,7 @@
+@import "@styles/variables.scss";
+
+#AppWrapper {
+  @media (min-width: $desktopMinBreakpoint) {
+    margin-left: $menuWidth;
+  }
+}

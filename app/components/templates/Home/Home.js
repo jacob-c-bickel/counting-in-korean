@@ -1,14 +1,95 @@
 import styles from "./Home.module.scss";
+import Page from "@modules/Page/Page";
 import PageHeader from "@modules/PageHeader/PageHeader";
-import PageContent from "@modules/PageContent/PageContent";
 
 export default function Home() {
   return (
-    <>
+    <Page>
       <PageHeader title="Home" />
-      <PageContent>
-        <p>I am home page!</p>
-      </PageContent>
-    </>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+      <p>I am home page!</p>
+    </Page>
   );
 }

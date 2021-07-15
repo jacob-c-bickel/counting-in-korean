@@ -1,23 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
 @import "@styles/variables.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  font-family: Montserrat, Helvetica Neue, sans-serif;
 }
 
 body {
+  background-color: $monoBgHard;
   overflow-x: hidden;
-}
-
-#AppWrapper {
-  height: 100vh;
-  width: 100vw;
-
-  display: grid;
-  grid-template-areas: "menu app";
-  grid-template-columns: auto 1fr;
-  gap: 0;
-
-  background-color: #d6e4eb;
+  color: $monoText;
 }

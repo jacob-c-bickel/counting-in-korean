@@ -1,14 +1,12 @@
 import styles from "./BasicPractice.module.scss";
-import PageContent from "@modules/PageContent/PageContent";
+import Page from "@modules/Page/Page";
 import PageHeader from "@modules/PageHeader/PageHeader";
 
 export default function BasicPractice() {
   return (
-    <>
+    <Page>
       <PageHeader title="Basic Practice" />
-      <PageContent>
-        <p>I am Basic Practice!</p>
-      </PageContent>
-    </>
+      <p>I am Basic Practice!</p>
+    </Page>
   );
 }

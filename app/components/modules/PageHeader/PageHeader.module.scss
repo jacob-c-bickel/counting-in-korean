@@ -1,32 +1,43 @@
 @import "@styles/variables.scss";
 
 .PageHeader {
-  grid-area: app;
-  z-index: $zPageHeader;
   height: $headerHeight;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: #adc9d7;
+  background-color: $monoBgHard;
 
-  .menuButton {
-    @media (min-width: $desktopMinBreakpoint) {
-      display: none;
+  @media (max-width: $mobileMaxBreakpoint) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    &.shadow {
+      box-shadow: 0 0.7rem 1rem -1.1rem black;
     }
   }
+}
 
-  .spacer {
-    width: 2.5rem;
-
-    @media (min-width: $desktopMinBreakpoint) {
-      display: none;
-    }
+.menuButton {
+  @media (min-width: $desktopMinBreakpoint) {
+    display: none;
   }
+}
 
-  h1 {
-    text-align: center;
-    flex-grow: 1;
+.spacer {
+  width: 2.5rem;
+
+  @media (min-width: $desktopMinBreakpoint) {
+    display: none;
   }
+}
+
+.title {
+  flex-grow: 1;
+
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
 }

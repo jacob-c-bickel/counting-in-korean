@@ -1,12 +1,15 @@
 @import "@styles/variables.scss";
 
 .Menu {
-  grid-area: app;
-  z-index: $zMenu;
-  width: 14rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $menuWidth;
+  height: 100vh;
+  z-index: 1;
 
   border-radius: 0 1rem 1rem 0;
-  background-color: #5b94ae;
+  background-color: $monoBg;
 
   transition: transform 0.25s;
 
@@ -21,19 +24,15 @@
       }
     }
   }
-
-  @media (min-width: $desktopMinBreakpoint) {
-    grid-area: menu;
-  }
 }
 
 .MenuBg {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  z-index: $zMenuBg;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 
   background-color: hsla(0, 0%, 0%, 0.75);
 

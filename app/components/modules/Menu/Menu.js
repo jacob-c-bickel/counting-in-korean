@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 import styles from "./Menu.module.scss";
-import AppContext from "@contexts/AppContext";
+import AppContext from "@app/AppContext";
 
 export default function Menu() {
   const app = useContext(AppContext);
@@ -19,12 +19,14 @@ export default function Menu() {
     }
   }, [app.showMenu]);
 
-  const classes = ` ${!app.showMenu ? styles.hidden : ""} ${removeMenu ? styles.removed : ""}`;
+  const classes = [!app.showMenu && styles.hidden, removeMenu && styles.removed]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <>
-      <div className={styles.MenuBg + classes} onClick={() => app.setShowMenu(false)} />
-      <div className={styles.Menu + classes}>
+      <div className={styles.MenuBg + " " + classes} onClick={() => app.setShowMenu(false)} />
+      <div className={styles.Menu + " " + classes}>
         <p>Menu</p>
         <Link href="/">Home</Link>
         <Link href="/practice/basic">Basic Practice</Link>

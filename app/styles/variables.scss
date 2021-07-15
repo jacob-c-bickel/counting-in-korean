@@ -1,10 +1,22 @@
 $zPageHeader: 100;
-$zMenuBg: 200;
-$zMenu: 201;
 
-$headerHeight: 3rem;
-$mobileMaxContentWidth: 45 rem;
+$headerHeight: 2.5rem;
+$menuWidth: 14rem;
+$mobileMaxContentWidth: 45rem;
 $desktopMaxContentWidth: 60rem;
 
 $mobileMaxBreakpoint: 991px;
-$desktopMinBreakpoint: 992px;
+$desktopMinBreakpoint: 991px;
+
+// Colors
+$monoBgHardest: #101010;
+$monoBgHard: #202020;
+$monoBg: #303030;
+$monoBgSoft: #404040;
+$monoBgSoftest: #505050;
+
+$monoTextHardest: #fff;
+$monoTextHard: #d0d0d0;
+$monoText: #b0b0b0;
+$monoTextSoft: #909090;
+$monoTextSoftest: #707070;
