@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import styles from "./BasicPractice.module.scss";
+import styles from "@styles/Practice.module.scss";
 import Page from "@modules/Page/Page";
 import PageHeader from "@modules/PageHeader/PageHeader";
 import Flashcard from "@modules/Flashcard/Flashcard";

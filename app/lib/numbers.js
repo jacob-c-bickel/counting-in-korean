@@ -4,7 +4,7 @@ const hangulRomanization = require("hangul-romanization");
  * @typedef {Object} PracticeNumber
  * @property {number} number - The actual number.
  * @property {string} hangul - The number's Native or Sino hangul form.
- * @property {string} romanization - The romanization of the number's Native or Sino form.
+ * @property {string} romanized - The romanization of the number's Native or Sino form.
  */
 
 /**
