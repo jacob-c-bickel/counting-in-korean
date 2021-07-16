@@ -8,6 +8,8 @@
   border-radius: 999rem;
   background-color: $monoBg;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 
   &:hover {
     .circle {
