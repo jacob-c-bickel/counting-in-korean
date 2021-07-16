@@ -6,8 +6,8 @@
       "@elements/*": ["./app/components/elements/*"],
       "@modules/*": ["./app/components/modules/*"],
       "@templates/*": ["./app/components/templates/*"],
-      "@styles/*": ["./app/styles/*"],
-      "@utils/*": ["./app/utils/*"]
+      "@lib/*": ["./app/lib/*"],
+      "@styles/*": ["./app/styles/*"]
     }
   }
 }

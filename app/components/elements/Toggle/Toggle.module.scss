@@ -1,0 +1,39 @@
+@import "@styles/variables.scss";
+
+.Toggle {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+
+  border-radius: 999rem;
+  background-color: $monoBg;
+  cursor: pointer;
+
+  &:hover {
+    .circle {
+      background-color: $monoText;
+    }
+  }
+
+  &:focus:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.125rem $monoOutline;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 0.25rem;
+  transform: translate(2.25rem);
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 999rem;
+  background-color: $monoTextSoft;
+
+  transition: transform 0.15s;
+
+  &.active {
+    transform: translate(0.25rem);
+  }
+}
