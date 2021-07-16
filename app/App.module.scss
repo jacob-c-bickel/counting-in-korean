@@ -1,6 +1,8 @@
 @import "@styles/variables.scss";
 
 #AppWrapper {
+  overflow-x: hidden;
+
   @media (min-width: $desktopMinBreakpoint) {
     margin-left: $menuWidth;
   }
