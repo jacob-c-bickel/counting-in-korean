@@ -10,6 +10,7 @@ import { generateNativeNumber, generateSinoNumber } from "@lib/numbers";
 export default function BasicPractice() {
   const [number, setNumber] = useState(generateNativeNumber());
   const [flashcardReset, setFlashcardReset] = useState(false);
+  const [flashcardFlipped, setFlashcardFlipped] = useState(false);
 
   const [promptType, setPromptType] = useState(true);
   const [promptTypeControl, setPromptTypeControl] = useState(true);
@@ -70,6 +71,8 @@ export default function BasicPractice() {
           promptNote={promptType ? "" : number.romanized}
           answer={promptType ? number.hangul : number.number.toLocaleString()}
           answerNote={promptType ? number.romanized : ""}
+          flipped={flashcardFlipped}
+          setFlipped={setFlashcardFlipped}
           reset={flashcardReset}
           setReset={setFlashcardReset}
           onNext={() => setNumber(generateNumber())}

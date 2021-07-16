@@ -31,11 +31,13 @@ export default function Flashcard({
   promptNote,
   answer,
   answerNote,
+  flipped,
+  setFlipped,
   reset,
   setReset,
   onNext,
 }) {
-  const [flipped, setFlipped] = useState(false);
+  // const [flipped, setFlipped] = useState(false);
   const [variant, setVariant] = useState("incoming");
 
   useEffect(() => {

@@ -51,7 +51,7 @@ const sinoGroups = ["", "만", "억"];
  * @param {string} mode The number type to use, either "native" or "sino"
  * @returns {(string|undefined)}
  */
-function numberToHangul(n, mode) {
+export function numberToHangul(n, mode) {
   if (!(typeof n === "number")) return;
   if (!["native", "sino"].includes(mode)) return;
 
