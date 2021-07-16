@@ -1,0 +1,68 @@
+@import "@styles/variables.scss";
+
+.Reference {
+  h2 {
+    margin: 2rem 0;
+
+    color: $monoTextHard;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+    margin-bottom: 1rem;
+
+    border-collapse: collapse;
+
+    tr {
+      &:nth-child(even) {
+        background-color: $monoBg;
+      }
+
+      td {
+        padding: 0.25rem;
+        color: $monoTextHardest;
+      }
+
+      td:nth-child(1) {
+        width: 20%;
+        border-top-left-radius: 999rem;
+        border-bottom-left-radius: 999rem;
+        text-align: right;
+        font-weight: 600;
+      }
+
+      td:nth-child(2) {
+        width: 34%;
+        text-align: center;
+        font-size: 1.125rem;
+        font-family: "Nanum Gothic", Montserrat, Helvetica Neue, sans-serif;
+        font-weight: 700;
+      }
+
+      td:last-child {
+        width: 33%;
+        color: $monoText;
+        border-top-right-radius: 999rem;
+        border-bottom-right-radius: 999rem;
+      }
+    }
+  }
+
+  .notes {
+    width: 100%;
+    max-width: 45rem;
+    margin: auto;
+    // color: $monoTextHard;
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.soft {
+  color: $monoTextSoftest;
+}

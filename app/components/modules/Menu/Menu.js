@@ -48,12 +48,12 @@ export default function Menu() {
         <p className={styles.subtitle}>Learn</p>
         <Link href="/learn/native">
           <a className={getLinkClassName("/learn/native")} onClick={handleLinkClick}>
-            Native Number Reference
+            Native Reference
           </a>
         </Link>
         <Link href="/learn/sino">
           <a className={getLinkClassName("/learn/sino")} onClick={handleLinkClick}>
-            Sino Number Reference
+            Sino Reference
           </a>
         </Link>
         <Link href="/learn/usage">
