@@ -6,6 +6,8 @@ import PageHeader from "@modules/PageHeader/PageHeader";
 import Flashcard from "@modules/Flashcard/Flashcard";
 import LabeledToggle from "@elements/LabeledToggle/LabeledToggle";
 import { generateContextPhrase } from "@lib/context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContextPractice() {
   const [phrase, setPhrase] = useState(generateContextPhrase());
@@ -51,8 +53,11 @@ export default function ContextPractice() {
         />
         {flashcardFlipped && (
           <div className={styles.notes}>
-            {phrase.notes.map((note) => (
-              <p>{note}</p>
+            {phrase.notes.map((note, i) => (
+              <div key={i}>
+                <FontAwesomeIcon icon={faInfoCircle} />
+                <p>{note}</p>
+              </div>
             ))}
           </div>
         )}
