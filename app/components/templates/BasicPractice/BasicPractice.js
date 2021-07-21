@@ -77,7 +77,6 @@ export default function BasicPractice() {
           setReset={setFlashcardReset}
           onNext={() => setNumber(generateNumber())}
         />
-        <div className={styles.botSpacer}></div>
       </div>
     </Page>
   );

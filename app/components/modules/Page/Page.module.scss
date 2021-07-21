@@ -6,7 +6,6 @@
   max-width: $mobileMaxContentWidth;
 
   @media (min-width: $desktopMinBreakpoint) {
-    margin: 0 auto;
     margin: 0;
     max-width: $desktopMaxContentWidth;
   }

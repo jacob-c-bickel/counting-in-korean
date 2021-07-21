@@ -61,7 +61,6 @@ export default function ContextPractice() {
             ))}
           </div>
         )}
-        {/* <div className={styles.botSpacer} /> */}
       </div>
     </Page>
   );
