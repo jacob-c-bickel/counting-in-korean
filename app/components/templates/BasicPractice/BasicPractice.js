@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "@styles/Practice.module.scss";
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 import Flashcard from "@modules/Flashcard/Flashcard";
 import LabeledToggle from "@elements/LabeledToggle/LabeledToggle";
 import { generateNativeNumber, generateSinoNumber } from "@lib/numbers";
@@ -44,8 +43,7 @@ export default function BasicPractice() {
   }, [numberSystem]);
 
   return (
-    <Page>
-      <PageHeader title="Basic Practice" />
+    <Page header="Basic Practice">
       <div className={styles.container}>
         <div className={styles.topSpacer}></div>
         <div className={styles.option}>

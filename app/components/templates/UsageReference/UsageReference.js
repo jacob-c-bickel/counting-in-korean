@@ -1,12 +1,14 @@
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 
 import styles from "@styles/Reference.module.scss";
 
 export default function UsageReference() {
   return (
-    <Page className={styles.Reference} style={{ marginBottom: "8rem" }}>
-      <PageHeader title="Number System Usage" />
+    <Page
+      className={styles.Reference}
+      style={{ marginBottom: "8rem" }}
+      header="Number System Usage"
+    >
       <h2>General Rules</h2>
       <div className={styles.notes}>
         <p>

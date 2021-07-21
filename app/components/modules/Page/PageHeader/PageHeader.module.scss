@@ -4,6 +4,7 @@
   height: $headerHeight;
   width: 100%;
   padding: 0.5rem;
+  z-index: 1;
 
   display: flex;
   justify-content: space-between;
@@ -15,9 +16,24 @@
     position: fixed;
     top: 0;
     left: 0;
+
     &.shadow {
       box-shadow: 0 0.7rem 1rem -1.1rem black;
     }
+  }
+
+  @media (min-width: $desktopMinBreakpoint) {
+    margin-left: $menuWidth;
+    width: unset;
+    max-width: $desktopMaxContentWidth;
+  }
+
+  h1 {
+    flex-grow: 1;
+
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
   }
 }
 
@@ -33,12 +49,4 @@
   @media (min-width: $desktopMinBreakpoint) {
     display: none;
   }
-}
-
-.title {
-  flex-grow: 1;
-
-  font-weight: 400;
-  font-size: 1rem;
-  text-align: center;
 }

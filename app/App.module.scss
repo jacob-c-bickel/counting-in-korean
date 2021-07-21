@@ -3,7 +3,15 @@
 #AppWrapper {
   overflow-x: hidden;
 
-  @media (min-width: $desktopMinBreakpoint) {
-    margin-left: $menuWidth;
-  }
+  // @media (min-width: $desktopMinBreakpoint) {
+  //   &:not(.noMenu) {
+  //     margin-left: $menuWidth;
+  //   }
+
+  //   .noMenu {
+  //     display: block;
+  //     margin-right: 4rem;
+  //     margin: auto;
+  //   }
+  // }
 }

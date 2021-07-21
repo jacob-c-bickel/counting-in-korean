@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@styles/Practice.module.scss";
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 import Flashcard from "@modules/Flashcard/Flashcard";
 import LabeledToggle from "@elements/LabeledToggle/LabeledToggle";
 import { generateContextPhrase } from "@lib/context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContextPractice() {
   const [phrase, setPhrase] = useState(generateContextPhrase());
@@ -27,8 +26,7 @@ export default function ContextPractice() {
   }, [promptTypeControl]);
 
   return (
-    <Page>
-      <PageHeader title="Context Practice" />
+    <Page header="Context Practice">
       <div className={styles.container}>
         <div className={styles.topSpacer} />
         <div className={styles.option}>

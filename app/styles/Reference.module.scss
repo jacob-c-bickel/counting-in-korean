@@ -6,6 +6,10 @@
 
     color: $monoTextHard;
     text-align: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   table {

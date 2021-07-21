@@ -1,11 +1,9 @@
 import styles from "@styles/Reference.module.scss";
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 
 export default function SinoReference() {
   return (
-    <Page className={styles.Reference} style={{ marginBottom: "8rem" }}>
-      <PageHeader title="Sino Reference" />
+    <Page className={styles.Reference} style={{ marginBottom: "8rem" }} header="Sino Reference">
       <h2>Numbers</h2>
       <table>
         <tbody>

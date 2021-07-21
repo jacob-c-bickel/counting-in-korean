@@ -1,1 +1,12 @@
 @import "@styles/variables.scss";
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $monoText;
+  }
+}

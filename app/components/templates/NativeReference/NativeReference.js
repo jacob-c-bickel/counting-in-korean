@@ -1,11 +1,9 @@
 import styles from "@styles/Reference.module.scss";
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 
 export default function NativeReference() {
   return (
-    <Page className={styles.Reference} style={{ marginBottom: "8rem" }}>
-      <PageHeader title="Native Reference" />
+    <Page className={styles.Reference} style={{ marginBottom: "8rem" }} header="Native Reference">
       <h2>Numbers</h2>
       <table>
         <tbody>

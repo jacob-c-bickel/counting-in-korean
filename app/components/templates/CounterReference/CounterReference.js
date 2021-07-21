@@ -1,11 +1,9 @@
 import styles from "@styles/Reference.module.scss";
 import Page from "@modules/Page/Page";
-import PageHeader from "@modules/PageHeader/PageHeader";
 
 export default function CounterReference() {
   return (
-    <Page className={styles.Reference} style={{ marginBottom: "8rem" }}>
-      <PageHeader title="Counter Reference" />
+    <Page className={styles.Reference} style={{ marginBottom: "8rem" }} header="Counter Reference">
       <h2>Counters</h2>
       <table className={styles.numbers}>
         <tbody>

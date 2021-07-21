@@ -1,32 +1,28 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./Menu.module.scss";
-import AppContext from "@app/AppContext";
 
-export default function Menu() {
+export default function Menu({ show, setShow }) {
   const router = useRouter();
-  const app = useContext(AppContext);
-  const [removeMenu, setRemoveMenu] = useState(true);
+  const [removeMenu, setRemoveMenu] = useState(true); // removes child elements from the DOM
 
   useEffect(() => {
-    if (app.showMenu) {
+    if (show) {
       setRemoveMenu(false);
     } else {
       setTimeout(() => {
         setRemoveMenu(true);
       }, 300);
     }
-  }, [app.showMenu]);
+  }, [show]);
 
-  const classes = [!app.showMenu && styles.hidden, removeMenu && styles.removed]
-    .filter(Boolean)
-    .join(" ");
+  const classes = [!show && styles.hidden, removeMenu && styles.removed].filter(Boolean).join(" ");
 
   return (
     <>
-      <div className={styles.MenuBg + " " + classes} onClick={() => app.setShowMenu(false)} />
+      <div className={styles.MenuBg + " " + classes} onClick={() => setShow(false)} />
       <div className={styles.Menu + " " + classes}>
         <Link href="/">
           <a className={styles.title} onClick={handleLinkClick} tabIndex="0">
@@ -61,11 +57,11 @@ export default function Menu() {
             Number System Usage
           </a>
         </Link>
-        {/* <Link href="/learn/counters">
+        <Link href="/learn/counters">
           <a className={getLinkClassName("/learn/counters")} onClick={handleLinkClick}>
             Counter Reference
           </a>
-        </Link> */}
+        </Link>
         <footer className={styles.footer}>Created by Jacob Bickel, 2021</footer>
       </div>
     </>
@@ -78,6 +74,6 @@ export default function Menu() {
   }
 
   function handleLinkClick() {
-    app.setShowMenu(false);
+    setShow(false);
   }
 }
