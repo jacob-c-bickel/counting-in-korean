@@ -31,7 +31,7 @@ export default function Toggle({ value, onClick }) {
 
   function handleKeyDown(event) {
     if (!inTransition) {
-      if (event.key === "Enter") {
+      if (event.key === "Enter" || event.key === " ") {
         onClick();
       }
     }
