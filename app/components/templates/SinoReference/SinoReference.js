@@ -97,6 +97,10 @@ export default function SinoReference() {
           <span className={styles.soft}>&emsp;e.g. 111 is 백십일 not 일백일십일</span>
         </p>
         <p>
+          There are two Sino-Korean words for 0. 영 is used for points, temperature, and math. 공 is
+          used for telephone numbers.
+        </p>
+        <p>
           In English, the grand unit changes in 1,000-fold intervals (thousand, million, billion,
           etc). In Korean, the grand unit changes in 10,000-fold intervals (만, 억, etc). This can
           be tricky as commas are still inserted on a 1,000-fold basis. When spelling out the

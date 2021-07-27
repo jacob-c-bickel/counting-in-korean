@@ -2,13 +2,32 @@
 
 .Reference {
   h2 {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
 
     color: $monoTextHard;
     text-align: center;
 
-    &:first-child {
-      margin-top: 0;
+    // &:first-child {
+    //   margin-top: 0;
+    // }
+  }
+
+  ul {
+    li {
+      margin-left: 1rem;
+      margin-bottom: 0.25rem;
+      // list-style-type: none;
+    }
+  }
+
+  .notes {
+    // width: 100%;
+    max-width: 45rem;
+    margin: auto;
+    // color: $monoTextHard;
+
+    p {
+      margin-bottom: 0.75rem;
     }
   }
 
@@ -52,17 +71,6 @@
         border-top-right-radius: 999rem;
         border-bottom-right-radius: 999rem;
       }
-    }
-  }
-
-  .notes {
-    width: 100%;
-    max-width: 45rem;
-    margin: auto;
-    // color: $monoTextHard;
-
-    p {
-      margin-bottom: 0.75rem;
     }
   }
 }
