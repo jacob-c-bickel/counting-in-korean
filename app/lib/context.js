@@ -1,6 +1,7 @@
 import { choose } from "./choose.js";
 import generateTime from "./generators/time";
 import generateMoney from "./generators/money";
+import generatePhoneNumber from "./generators/phoneNumber.js";
 
 /**
  * @typedef {Object} ContextPhrase
@@ -11,8 +12,9 @@ import generateMoney from "./generators/money";
  */
 
 const generatorChoices = [
-  [0.5, generateTime],
-  [0.5, generateMoney],
+  [0.33, generateTime],
+  [0.34, generateMoney],
+  [0.33, generatePhoneNumber],
 ];
 
 export function generateContextPhrase() {

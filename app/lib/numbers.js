@@ -23,18 +23,34 @@ export function generateNativeNumber() {
  * @returns {PracticeNumber}
  */
 export function generateSinoNumber() {
-  let r = Math.random();
-  let maxNumber;
-  if (r > 0.75) maxNumber = 99;
-  else if (r > 0.5) maxNumber = 999;
-  else if (r > 0.4) maxNumber = 9999;
-  else if (r > 0.3) maxNumber = 99999;
-  else if (r > 0.2) maxNumber = 999999;
-  else if (r > 0.1) maxNumber = 9999999;
-  else if (r > 0.03) maxNumber = 999999999;
-  else maxNumber = 999999999999;
+  // let r = Math.random();
+  // let maxNumber;
+  // if (r > 0.75) maxNumber = 99;
+  // else if (r > 0.5) maxNumber = 999;
+  // else if (r > 0.4) maxNumber = 9999;
+  // else if (r > 0.3) maxNumber = 99999;
+  // else if (r > 0.2) maxNumber = 999999;
+  // else if (r > 0.1) maxNumber = 9999999;
+  // else if (r > 0.03) maxNumber = 999999999;
+  // else maxNumber = 999999999999;
+  let number = Math.floor(Math.random() * 100) + 1;
+  for (let i = 0; i < 3; i++) {
+    let r = Math.random();
+    if (r < 0.1) {
+      number *= 1000;
+    } else if (r < 0.15) {
+      number *= 1000;
+      number += Math.floor(Math.random() * 10);
+    } else if (r < 0.225) {
+      number *= 1000;
+      number += Math.floor(Math.random() * 10) * 10;
+    } else if (r < 0.325) {
+      number *= 1000;
+      number += Math.floor(Math.random() * 10) * 100;
+    }
+  }
 
-  const number = Math.ceil(Math.random() * maxNumber);
+  // const number = Math.ceil(Math.random() * maxNumber);
   const hangul = numberToHangul(number, "sino");
   const romanized = hangulRomanization.convert(hangul);
   return { number, hangul, romanized };
@@ -53,7 +69,7 @@ const sinoGroups = ["", "만", "억"];
  */
 export function numberToHangul(n, mode) {
   if (!(typeof n === "number")) return;
-  if (!["native", "sino"].includes(mode)) return;
+  if (!["native", "sino", "sino-phone"].includes(mode)) return;
 
   let hangul = "";
 
@@ -66,8 +82,11 @@ export function numberToHangul(n, mode) {
     return hangul;
   }
 
-  if (mode === "sino") {
-    if (n === 0) return "영";
+  if (mode === "sino" || mode === "sino-phone") {
+    if (n === 0) {
+      if (mode === "sino-phone") return "공";
+      return "영";
+    }
 
     let numberString = n.toString();
     numberString = numberString.padStart(
