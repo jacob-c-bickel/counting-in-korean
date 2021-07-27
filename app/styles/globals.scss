@@ -14,3 +14,27 @@ body {
   background-color: $monoBgHard;
   color: $monoText;
 }
+
+button {
+  padding: 0.75rem;
+
+  background-color: hsla(0, 0%, 0%, 0);
+  border: solid 0.125rem $monoBgSoft;
+  border-radius: 999rem;
+
+  color: $monoText;
+  font-size: 1rem;
+  // font-weight: bold;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $monoBg;
+    border-color: $monoBgSoftest;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.125rem $monoOutline;
+  }
+}

@@ -5,6 +5,10 @@
   padding: 0 1rem;
   max-width: $mobileMaxContentWidth;
 
+  &.menuless {
+    margin: auto;
+  }
+
   @media (min-width: $desktopMinBreakpoint) {
     max-width: $desktopMaxContentWidth;
     margin: auto;

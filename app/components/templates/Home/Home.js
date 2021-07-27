@@ -11,25 +11,33 @@ export default function Home() {
         <title>Counting in Korean</title>
       </Head>
       <h1>Counting in Korean</h1>
-      <Link href="/practice/basic">
-        <a>Basic Practice</a>
-      </Link>
+      <p>Practice</p>
+      <div className={styles.buttonGrid}>
+        <Link href="/practice/basic">
+          <button>Basic Practice</button>
+        </Link>
+        <Link href="/practice/context">
+          <button>Context Practice</button>
+        </Link>
+      </div>
+      <p>Learn</p>
+      <div className={styles.buttonGrid}>
+        <Link href="/learn/native">
+          <button>Native Reference</button>
+        </Link>
 
-      <Link href="/practice/context">
-        <a>Context Practice</a>
-      </Link>
+        <Link href="/learn/sino">
+          <button>Sino Reference</button>
+        </Link>
 
-      <Link href="/learn/native">
-        <a>Native Reference</a>
-      </Link>
+        <Link href="/learn/usage">
+          <button>Number System usage</button>
+        </Link>
 
-      <Link href="/learn/sino">
-        <a>Sino Reference</a>
-      </Link>
-
-      <Link href="/learn/usage">
-        <a>Number System usage</a>
-      </Link>
+        <Link href="/learn/counters">
+          <button>Counters</button>
+        </Link>
+      </div>
     </Page>
   );
 }

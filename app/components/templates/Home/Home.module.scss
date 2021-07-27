@@ -1,12 +1,36 @@
 @import "@styles/variables.scss";
 
 .Home {
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  a {
-    text-decoration: none;
-    color: $monoText;
+  button {
+    display: block;
+    width: 16rem;
+    margin: 0.5rem;
+    // height: 3rem;
+
+    // border: solid 0.125rem white;
+    // border-radius: 999rem;
+
+    // text-decoration: none;
+    // text-align: center;
+    // vertical-align: middle;
+    // color: $monoText;
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  p {
+    margin: 1rem 0;
+    color: $monoTextSoft;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }

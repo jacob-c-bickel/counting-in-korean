@@ -44,10 +44,10 @@ export default function Page({ children, className, title, header, ...props }) {
 
       <motion.div
         className={styles.Page + " " + className + (header ? "" : " " + styles.menuless)}
-        initial={{ translateX: "-100%" }}
-        animate={{ translateX: 0 }}
-        exit={{ translateX: "100%" }}
-        transition={{ duration: 0.15, ease: "easeInOut" }}
+        initial={{ translateX: "-20%", opacity: 0 }}
+        animate={{ translateX: 0, opacity: 1 }}
+        exit={{ translateX: "20%", opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         {...props}
       >
         {children}
