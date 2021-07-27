@@ -23,6 +23,7 @@ const areaCodes = [
 ];
 
 export default function generatePhoneNumber() {
+  // Generate number
   let abroad = Math.random() < 0.2;
 
   let areaCode;
@@ -49,6 +50,7 @@ export default function generatePhoneNumber() {
   if (areaCode) english += areaCode + "-";
   english += centralNumber + "-" + subscriberNumber;
 
+  // Compose hangul
   let hangul = "";
   for (let c of english) {
     let d = parseInt(c);
