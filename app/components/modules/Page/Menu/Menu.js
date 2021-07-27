@@ -24,40 +24,40 @@ export default function Menu({ show, setShow }) {
     <>
       <div className={styles.MenuBg + " " + classes} onClick={() => setShow(false)} />
       <div className={styles.Menu + " " + classes}>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a className={styles.title} onClick={handleLinkClick} tabIndex="0">
             Counting in Korean!
           </a>
         </Link>
         <p className={styles.subtitle}>Practice</p>
 
-        <Link href="/practice/basic">
+        <Link href="/practice/basic" scroll={false}>
           <a className={getLinkClassName("/practice/basic")} onClick={handleLinkClick}>
             Basic Practice
           </a>
         </Link>
-        <Link href="/practice/context">
+        <Link href="/practice/context" scroll={false}>
           <a className={getLinkClassName("/practice/context")} onClick={handleLinkClick}>
             Context Practice
           </a>
         </Link>
         <p className={styles.subtitle}>Learn</p>
-        <Link href="/learn/native">
+        <Link href="/learn/native" scroll={false}>
           <a className={getLinkClassName("/learn/native")} onClick={handleLinkClick}>
             Native Reference
           </a>
         </Link>
-        <Link href="/learn/sino">
+        <Link href="/learn/sino" scroll={false}>
           <a className={getLinkClassName("/learn/sino")} onClick={handleLinkClick}>
             Sino Reference
           </a>
         </Link>
-        <Link href="/learn/usage">
+        <Link href="/learn/usage" scroll={false}>
           <a className={getLinkClassName("/learn/usage")} onClick={handleLinkClick}>
             Number System Usage
           </a>
         </Link>
-        <Link href="/learn/counters">
+        <Link href="/learn/counters" scroll={false}>
           <a className={getLinkClassName("/learn/counters")} onClick={handleLinkClick}>
             Counter Reference
           </a>
