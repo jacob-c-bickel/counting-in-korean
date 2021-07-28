@@ -1,85 +1,31 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import { useState } from "react";
 
 import styles from "./Flashcard.module.scss";
 
-const variants = {
-  incoming: {
-    translateX: "-10rem",
-    opacity: 0,
-    transition: { duration: 0 },
-  },
-  outgoing: {
-    translateX: "10rem",
-    opacity: 0,
-    transition: { duration: 0.15 },
-  },
-  normal: {
-    translateX: 0,
-    opacity: 1,
-    rotateX: 0,
-    transition: { duration: 0.15 },
-  },
-  flipping: {
-    rotateX: 90,
-    transition: { duration: 0.15 },
-  },
-};
-
-export default function Flashcard({
-  prompt,
-  promptNote,
-  answer,
-  answerNote,
-  flipped,
-  setFlipped,
-  reset,
-  setReset,
-  onNext,
-}) {
-  // const [flipped, setFlipped] = useState(false);
-  const [variant, setVariant] = useState("incoming");
-
-  useEffect(() => {
-    if (variant === "incoming") {
-      setTimeout(() => setVariant("normal"), 50);
-    }
-    if (variant === "flipping") {
-      setTimeout(() => {
-        setVariant("normal");
-        setFlipped(true);
-      }, 150);
-    }
-    if (variant === "outgoing") {
-      setTimeout(() => {
-        setVariant("incoming");
-        setFlipped(false);
-        if (reset) {
-          setReset(false);
-        } else {
-          onNext();
-        }
-      }, 150);
-    }
-  }, [variant]);
-
-  useEffect(() => {
-    if (reset) {
-      // setReset(false);
-      setVariant("outgoing");
-    }
-  }, [reset]);
+export default function Flashcard(props) {
+  if (props.promptWithA) {
+    var prompt = props.valueA;
+    var promptNote = props.noteA;
+    var answer = props.valueB;
+    var answerNote = props.noteB;
+  } else {
+    var prompt = props.valueB;
+    var promptNote = props.noteB;
+    var answer = props.valueA;
+    var answerNote = props.noteA;
+  }
 
   return (
-    <motion.div
-      variants={variants}
-      animate={variant}
+    <div
+      // variants={variants}
+      // animate={variant}
       onClick={handleClick}
-      className={styles.Flashcard}
-      tabIndex="0"
       onKeyDown={handleKeyDown}
+      className={styles.Flashcard + " " + props.animationClass}
+      tabIndex="0"
     >
-      {!flipped ? (
+      {!props.flipped ? (
         <>
           <p className={styles.promptLarge}>{prompt}</p>
           <p className={styles.note}>{promptNote}</p>
@@ -92,14 +38,14 @@ export default function Flashcard({
           <p className={styles.note}>{answerNote}</p>
         </>
       )}
-    </motion.div>
+    </div>
   );
 
   function handleClick(event) {
-    if (flipped) {
-      setVariant("outgoing");
+    if (props.flipped) {
+      props.swap();
     } else {
-      setVariant("flipping");
+      props.flip();
     }
   }
 

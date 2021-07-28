@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
+import { generateContextPhrase } from "@lib/context";
+import useFlashcard from "@app/hooks/useFlashcard";
 import styles from "@styles/Practice.module.scss";
 import Page from "@modules/Page/Page";
 import Flashcard from "@modules/Flashcard/Flashcard";
 import LabeledToggle from "@elements/LabeledToggle/LabeledToggle";
-import { generateContextPhrase } from "@lib/context";
 
 export default function ContextPractice() {
-  const [phrase, setPhrase] = useState(generateContextPhrase());
-  const [flashcardReset, setFlashcardReset] = useState(false);
-  const [flashcardFlipped, setFlashcardFlipped] = useState(false);
+  const [notes, setNotes] = useState([]);
 
-  const [promptType, setPromptType] = useState(true);
-  const [promptTypeControl, setPromptTypeControl] = useState(true);
+  const generatePhrase = useCallback(() => {
+    let newPhrase = generateContextPhrase();
+    return {
+      valueA: newPhrase.english,
+      noteA: "",
+      valueB: newPhrase.hangul,
+      noteB: newPhrase.romanized,
+      onSwap: () => setNotes(newPhrase.notes),
+    };
+  }, []);
 
-  useEffect(() => {
-    if (promptTypeControl === promptType) return; // Stops on initial render
-    setFlashcardReset(true);
-    setTimeout(() => {
-      setPromptType((prev) => !prev);
-      setPhrase(generateContextPhrase());
-    }, 150);
-  }, [promptTypeControl]);
+  const flashcard = useFlashcard(generatePhrase);
 
   return (
     <Page header="Context Practice">
@@ -32,26 +32,16 @@ export default function ContextPractice() {
         <div className={styles.option}>
           <label>Prompt</label>
           <LabeledToggle
-            value={promptTypeControl}
-            onClick={() => setPromptTypeControl((prev) => !prev)}
+            value={flashcard.promptWithAControlValue}
+            onClick={flashcard.switchPrompt}
             onLabel="English"
             offLabel="한국어"
           />
         </div>
-        <Flashcard
-          prompt={promptType ? phrase.english : phrase.hangul}
-          promptNote={promptType ? "" : phrase.romanized}
-          answer={promptType ? phrase.hangul : phrase.english}
-          answerNote={promptType ? phrase.romanized : ""}
-          flipped={flashcardFlipped}
-          setFlipped={setFlashcardFlipped}
-          reset={flashcardReset}
-          setReset={setFlashcardReset}
-          onNext={() => setPhrase(generateContextPhrase())}
-        />
-        {flashcardFlipped && (
+        <Flashcard {...flashcard} />
+        {flashcard.flipped && (
           <div className={styles.notes}>
-            {phrase.notes.map((note, i) => (
+            {notes.map((note, i) => (
               <div key={i}>
                 <FontAwesomeIcon icon={faInfoCircle} />
                 <p>{note}</p>

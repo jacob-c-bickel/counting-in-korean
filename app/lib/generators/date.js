@@ -30,12 +30,9 @@ export default function generateDate() {
   // Compose hangul
   let hangul = "";
   if (includeYear) {
-    console.log("y " + year);
     hangul += numberToHangul(year, "sino") + "년 ";
   }
-  console.log("M " + date.getMonth() + 1);
   hangul += numberToHangul(date.getMonth() + 1, "sino") + "월 ";
-  console.log("d " + date.getDate());
   hangul += numberToHangul(date.getDate(), "sino") + "일";
 
   return {

@@ -1,15 +1,59 @@
 @import "@styles/variables.scss";
 
+@keyframes incoming {
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swapping {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+
+  50.1% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
 .Flashcard {
   width: 100%;
   max-width: 30rem;
   height: 15rem;
-  margin: auto;
+  margin: 0 auto 0.25rem;
   padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 0.5rem;
   background-color: $monoBg;
-
-  // transform-origin: center center center;
 
   user-select: none;
   cursor: pointer;
@@ -29,6 +73,21 @@
 
   p {
     text-align: center;
+  }
+
+  &.incoming {
+    animation-duration: 0.5s;
+    animation-name: incoming;
+  }
+
+  &.swapping {
+    animation-duration: 1s;
+    animation-name: swapping;
+  }
+
+  &.flipping {
+    animation-duration: 0.5s;
+    animation-name: flipping;
   }
 }
 
