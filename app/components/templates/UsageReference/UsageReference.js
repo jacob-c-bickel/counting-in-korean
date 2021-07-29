@@ -27,8 +27,8 @@ export default function UsageReference() {
       <h2>Native Korean Uses</h2>
       <ul className={styles.notes}>
         <li>Counting in small numbers</li>
-        <li>People's age</li>
         <li>Hours</li>
+        <li>Age (when speaking of yourself or someone younger)</li>
       </ul>
 
       <h2>Sino-Korean Uses</h2>
@@ -39,7 +39,7 @@ export default function UsageReference() {
         <li>Addresses</li>
         <li>Math</li>
         <li>Minutes, days, months, and years</li>
-        <li>The names of months</li>
+        <li>Age (in a formal context or when speaking of someone older)</li>
       </ul>
 
       <h2>Artillery Numbers</h2>

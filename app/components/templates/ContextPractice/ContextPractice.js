@@ -16,7 +16,7 @@ export default function ContextPractice() {
     let newPhrase = generateContextPhrase();
     return {
       valueA: newPhrase.english,
-      noteA: "",
+      noteA: newPhrase.englishNote,
       valueB: newPhrase.hangul,
       noteB: newPhrase.romanized,
       onSwap: () => setNotes(newPhrase.notes),

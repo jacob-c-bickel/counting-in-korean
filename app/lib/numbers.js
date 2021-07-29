@@ -23,16 +23,6 @@ export function generateNativeNumber() {
  * @returns {PracticeNumber}
  */
 export function generateSinoNumber() {
-  // let r = Math.random();
-  // let maxNumber;
-  // if (r > 0.75) maxNumber = 99;
-  // else if (r > 0.5) maxNumber = 999;
-  // else if (r > 0.4) maxNumber = 9999;
-  // else if (r > 0.3) maxNumber = 99999;
-  // else if (r > 0.2) maxNumber = 999999;
-  // else if (r > 0.1) maxNumber = 9999999;
-  // else if (r > 0.03) maxNumber = 999999999;
-  // else maxNumber = 999999999999;
   let number = Math.floor(Math.random() * 100) + 1;
   for (let i = 0; i < 3; i++) {
     let r = Math.random();
@@ -50,7 +40,6 @@ export function generateSinoNumber() {
     }
   }
 
-  // const number = Math.ceil(Math.random() * maxNumber);
   const hangul = numberToHangul(number, "sino");
   const romanized = hangulRomanization.convert(hangul);
   return { number, hangul, romanized };
@@ -58,6 +47,7 @@ export function generateSinoNumber() {
 
 const nativeOnes = ["", "하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟", "아홉"];
 const nativeTens = ["", "열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"];
+const nativeCountingOnes = ["", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉"];
 const sinoDigits = ["", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"];
 const sinoGroups = ["", "만", "억"];
 
@@ -69,7 +59,7 @@ const sinoGroups = ["", "만", "억"];
  */
 export function numberToHangul(n, mode) {
   if (!(typeof n === "number")) return;
-  if (!["native", "sino", "sino-phone"].includes(mode)) return;
+  if (!["native", "native-counting", "sino", "sino-phone"].includes(mode)) return;
 
   let hangul = "";
 
@@ -79,6 +69,16 @@ export function numberToHangul(n, mode) {
     const numberString = n.toString().padStart(2, "0");
     hangul += nativeTens[numberString[0]];
     hangul += nativeOnes[numberString[1]];
+    return hangul;
+  }
+
+  if (mode === "native-counting") {
+    if (n < 1 || n > 99) return;
+    if (n === 20) return "스무";
+
+    const numberString = n.toString().padStart(2, "0");
+    hangul += nativeTens[numberString[0]];
+    hangul += nativeCountingOnes[numberString[1]];
     return hangul;
   }
 

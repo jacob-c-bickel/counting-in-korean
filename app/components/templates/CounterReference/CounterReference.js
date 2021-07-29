@@ -23,9 +23,14 @@ export default function CounterReference() {
             <td>beon</td>
           </tr>
           <tr>
-            <td>Age</td>
+            <td>Age (native)</td>
             <td>살</td>
             <td>sal</td>
+          </tr>
+          <tr>
+            <td>Age (sino)</td>
+            <td>세</td>
+            <td>sae</td>
           </tr>
           <tr>
             <td>Animals</td>
@@ -53,9 +58,9 @@ export default function CounterReference() {
             <td>beol</td>
           </tr>
           <tr>
-            <td>Days</td>
-            <td>일</td>
-            <td>il</td>
+            <td>Years</td>
+            <td>년</td>
+            <td>nyeon</td>
           </tr>
           <tr>
             <td>Months</td>
@@ -63,28 +68,18 @@ export default function CounterReference() {
             <td>wol</td>
           </tr>
           <tr>
-            <td>Years</td>
-            <td>년</td>
-            <td>nyeon</td>
+            <td>Days</td>
+            <td>일</td>
+            <td>il</td>
           </tr>
         </tbody>
       </table>
       <h2>Notes</h2>
       <div className={styles.notes}>
         <p>
-          When using a counter, the following native numbers change:
-          <br />
-          <span className={styles.soft}>&emsp;1: 하나 &rarr; 한</span>
-          <br />
-          <span className={styles.soft}>&emsp;2: 둘 &rarr; 두</span>
-          <br />
-          <span className={styles.soft}>&emsp;3: 셋 &rarr; 세</span>
-          <br />
-          <span className={styles.soft}>&emsp;4: 넷 &rarr; 네</span>
-          <br />
-          <span className={styles.soft}>&emsp;20: 스물 &rarr; 스무</span>
+          If spelling out the number use a space between the number and the counter, otherwise do
+          not.
         </p>
-        <p>Use a space between the number and the counter.</p>
       </div>
     </Page>
   );

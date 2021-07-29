@@ -107,6 +107,19 @@ export default function NativeReference() {
           <br />
           <span className={styles.soft}>&emsp;e.g. 31 is 서른하나 (seoreun-hana)</span>
         </p>
+        <p>
+          When using a counter, the following native numbers change:
+          <ul style={{ marginLeft: "2rem" }}>
+            <li>1: 하나 &rarr; 한 (han)</li>
+            <li>2: 둘 &rarr; 두 (du)</li>
+            <li>3: 셋 &rarr; 세 (se)</li>
+            <li>4: 넷 &rarr; 네 (ne)</li>
+            <li>20: 스물 &rarr; 스무 (seumu)</li>
+          </ul>
+          The one's place is always changed, however the 스무 is only used for exactly 20.
+          <br />
+          <span className={styles.soft}>&emsp;e.g. 21 is 스물한 (seumul-han)</span>
+        </p>
       </div>
     </Page>
   );
