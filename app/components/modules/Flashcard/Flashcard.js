@@ -1,6 +1,4 @@
 // import { motion } from "framer-motion";
-import { useState } from "react";
-
 import styles from "./Flashcard.module.scss";
 
 export default function Flashcard(props) {
@@ -18,8 +16,6 @@ export default function Flashcard(props) {
 
   return (
     <div
-      // variants={variants}
-      // animate={variant}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       className={styles.Flashcard + " " + props.animationClass}
