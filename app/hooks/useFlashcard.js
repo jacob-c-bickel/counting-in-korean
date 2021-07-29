@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import styles from "@modules/Flashcard/Flashcard.module.scss";
 
-const ANIMATION_DURATION = 500;
+const ANIMATION_DURATION = 400;
 
 export default function useFlashcard(getValues) {
   const [valueA, setValueA] = useState();

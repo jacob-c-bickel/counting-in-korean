@@ -76,17 +76,17 @@
   }
 
   &.incoming {
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-name: incoming;
   }
 
   &.swapping {
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-name: swapping;
   }
 
   &.flipping {
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-name: flipping;
   }
 }
