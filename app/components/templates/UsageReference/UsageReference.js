@@ -12,7 +12,7 @@ export default function UsageReference() {
       <h2>General Rules</h2>
       <div className={styles.notes}>
         <p>
-          In general, Native Korean is used for "counting" and Sino-Korean is used for "numbers".
+          Native Korean is commonly used for "counting" while Sino-Korean is used for "numbers".
         </p>
         <p>
           The higher the number the more likely Sino-Korean is to be used until Native numbers stop
@@ -22,13 +22,18 @@ export default function UsageReference() {
           When telling the time, Native Korean is used for the hours and Sino-Korean is used for the
           minutes.
         </p>
+        <p>
+          When talking about someone's age, the older the person is the more likely Sino-Korean is
+          to be used. Sino-Korean starts to become common at around 30 years old, and is used near
+          exclusively at around 50 years old.
+        </p>
       </div>
 
       <h2>Native Korean Uses</h2>
       <ul className={styles.notes}>
         <li>Counting in small numbers</li>
         <li>Hours</li>
-        <li>Age (when speaking of yourself or someone younger)</li>
+        <li>Age (younger people)</li>
       </ul>
 
       <h2>Sino-Korean Uses</h2>
@@ -38,11 +43,11 @@ export default function UsageReference() {
         <li>Phone Numbers</li>
         <li>Addresses</li>
         <li>Math</li>
-        <li>Minutes, days, months, and years</li>
-        <li>Age (in a formal context or when speaking of someone older)</li>
+        <li>Time (except hours)</li>
+        <li>Age (older people)</li>
       </ul>
 
-      <h2>Artillery Numbers</h2>
+      {/* <h2>Artillery Numbers</h2>
       <div className={styles.notes}>
         <p>
           The military uses a combination of Native and Sino numbers called 포병 숫자 (artillery
@@ -106,7 +111,7 @@ export default function UsageReference() {
           </tbody>
         </table>
         <p>Multi-digit numbers are read out digit by digit.</p>
-      </div>
+      </div> */}
     </Page>
   );
 }

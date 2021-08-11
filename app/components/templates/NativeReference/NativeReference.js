@@ -116,7 +116,7 @@ export default function NativeReference() {
             <li>4: 넷 &rarr; 네 (ne)</li>
             <li>20: 스물 &rarr; 스무 (seumu)</li>
           </ul>
-          The one's place is always changed, however the 스무 is only used for exactly 20.
+          The one's place is always changed, however 스무 is only used for exactly 20.
           <br />
           <span className={styles.soft}>&emsp;e.g. 21 is 스물한 (seumul-han)</span>
         </p>

@@ -78,7 +78,7 @@ export default function SinoReference() {
             <td>man</td>
           </tr>
           <tr>
-            <td>100 M</td>
+            <td>100 million</td>
             <td>억</td>
             <td>eok</td>
           </tr>
@@ -102,9 +102,9 @@ export default function SinoReference() {
         </p>
         <p>
           In English, the grand unit changes in 1,000-fold intervals (thousand, million, billion,
-          etc). In Korean, the grand unit changes in 10,000-fold intervals (만, 억, etc). This can
-          be tricky as commas are still inserted on a 1,000-fold basis. When spelling out the
-          number, however, spaces are added on a 10,000-fold basis.
+          etc). In Korean, the grand unit changes in 10,000-fold intervals (만, 억, 조, etc). Commas
+          are still inserted on a 1,000-fold interval, however when spelling out the number spaces
+          are added on a 10,000-fold interval.
         </p>
       </div>
     </Page>
