@@ -54,7 +54,7 @@ const sinoGroups = ["", "만", "억"];
 /**
  * Takes in a number and returs it in Hangul.
  * @param {number} n - The number to convert
- * @param {string} mode The number type to use, either "native" or "sino"
+ * @param {string} mode The number type to use, either "native", "native-counting", "sino", or "sino-phone"
  * @returns {(string|undefined)}
  */
 export function numberToHangul(n, mode) {

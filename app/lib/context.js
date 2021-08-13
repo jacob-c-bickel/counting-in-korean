@@ -4,6 +4,7 @@ import generateMoney from "./generators/money";
 import generatePhoneNumber from "./generators/phoneNumber.js";
 import generateDate from "./generators/date.js";
 import generateAge from "./generators/age.js";
+import generateCount from "./generators/count.js";
 
 /**
  * @typedef {Object} ContextPhrase
@@ -15,11 +16,12 @@ import generateAge from "./generators/age.js";
  */
 
 const generatorChoices = [
-  [0.2, generateTime],
-  [0.2, generateMoney],
-  [0.2, generatePhoneNumber],
-  [0.2, generateDate],
-  [0.2, generateAge],
+  [0.1, generateTime],
+  [0.1, generateMoney],
+  [0.1, generatePhoneNumber],
+  [0.1, generateDate],
+  [0.1, generateAge],
+  [0.5, generateCount],
 ];
 
 export function generateContextPhrase() {

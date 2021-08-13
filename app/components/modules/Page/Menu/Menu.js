@@ -52,14 +52,14 @@ export default function Menu({ show, setShow }) {
             Sino Reference
           </a>
         </Link>
-        <Link href="/learn/usage" scroll={false}>
-          <a className={getLinkClassName("/learn/usage")} onClick={handleLinkClick}>
-            Number System Usage
-          </a>
-        </Link>
         <Link href="/learn/counters" scroll={false}>
           <a className={getLinkClassName("/learn/counters")} onClick={handleLinkClick}>
             Counter Reference
+          </a>
+        </Link>
+        <Link href="/learn/usage" scroll={false}>
+          <a className={getLinkClassName("/learn/usage")} onClick={handleLinkClick}>
+            Number System Usage
           </a>
         </Link>
         <footer className={styles.footer}>Created by Jacob Bickel, 2021</footer>
