@@ -1,0 +1,41 @@
+const NativeNumbers = [
+  { number: 1, hangul: "하나" },
+  { number: 2, hangul: "둘" },
+  { number: 3, hangul: "셋" },
+  { number: 4, hangul: "넷" },
+  { number: 5, hangul: "다섯" },
+  { number: 6, hangul: "여섯" },
+  { number: 7, hangul: "일곱" },
+  { number: 8, hangul: "여덟" },
+  { number: 9, hangul: "아홉" },
+  { number: 10, hangul: "열" },
+  { number: 20, hangul: "스물" },
+  { number: 30, hangul: "서른" },
+  { number: 40, hangul: "마흔" },
+  { number: 50, hangul: "쉰" },
+  { number: 60, hangul: "예순" },
+  { number: 70, hangul: "일흔" },
+  { number: 80, hangul: "여든" },
+  { number: 90, hangul: "아흔" },
+];
+
+const SinoNumbers = [
+  { number: 0, hangul: "영/공" },
+  { number: 1, hangul: "일" },
+  { number: 2, hangul: "이" },
+  { number: 3, hangul: "삼" },
+  { number: 4, hangul: "사" },
+  { number: 5, hangul: "오" },
+  { number: 6, hangul: "육" },
+  { number: 7, hangul: "칠" },
+  { number: 8, hangul: "팔" },
+  { number: 9, hangul: "구" },
+  { number: 10, hangul: "십" },
+  { number: 100, hangul: "백" },
+  { number: "1,000", hangul: "천" },
+  { number: "10,000", hangul: "만" },
+  { number: "100 million", hangul: "억" },
+  { number: "1 trillion", hangul: "조" },
+];
+
+export { NativeNumbers, SinoNumbers };

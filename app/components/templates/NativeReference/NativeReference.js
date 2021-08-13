@@ -1,3 +1,6 @@
+const hangulRomanization = require("hangul-romanization");
+
+import { NativeNumbers } from "@lib/data/numbers";
 import styles from "@styles/Reference.module.scss";
 import Page from "@modules/Page/Page";
 
@@ -7,98 +10,17 @@ export default function NativeReference() {
       <h2>Numbers</h2>
       <table>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>하나</td>
-            <td>hana</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>둘</td>
-            <td>dul</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>셋</td>
-            <td>set</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>넷</td>
-            <td>net</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>다섯</td>
-            <td>daseot</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>여섯</td>
-            <td>yeoseot</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>일곱</td>
-            <td>ilgop</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>여덟</td>
-            <td>yeodeol</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>아홉</td>
-            <td>ahop</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>열</td>
-            <td>yeol</td>
-          </tr>
-          <tr>
-            <td>20</td>
-            <td>스물</td>
-            <td>seumul</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>서른</td>
-            <td>seoreun</td>
-          </tr>
-          <tr>
-            <td>40</td>
-            <td>마흔</td>
-            <td>maheun</td>
-          </tr>
-          <tr>
-            <td>50</td>
-            <td>쉰</td>
-            <td>swin</td>
-          </tr>
-          <tr>
-            <td>60</td>
-            <td>예순</td>
-            <td>yesun</td>
-          </tr>
-          <tr>
-            <td>70</td>
-            <td>일흔</td>
-            <td>ilheun</td>
-          </tr>
-          <tr>
-            <td>80</td>
-            <td>여든</td>
-            <td>yeodeun</td>
-          </tr>
-          <tr>
-            <td>90</td>
-            <td>아흔</td>
-            <td>aheun</td>
-          </tr>
+          {NativeNumbers.map((n) => (
+            <tr>
+              <td className={styles.right}>{n.number}</td>
+              <td>
+                {n.hangul} <span>({hangulRomanization.convert(n.hangul)})</span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
+
       <h2>Notes</h2>
       <div className={styles.notes}>
         <p>Native Korean numbers only go from 1 to 99.</p>

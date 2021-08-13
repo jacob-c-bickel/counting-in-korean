@@ -1,3 +1,6 @@
+const hangulRomanization = require("hangul-romanization");
+
+import { SinoNumbers } from "@lib/data/numbers";
 import styles from "@styles/Reference.module.scss";
 import Page from "@modules/Page/Page";
 
@@ -7,88 +10,17 @@ export default function SinoReference() {
       <h2>Numbers</h2>
       <table>
         <tbody>
-          <tr>
-            <td>0</td>
-            <td>영/공</td>
-            <td>yong/gong</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>일</td>
-            <td>il</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>이</td>
-            <td>i</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>삼</td>
-            <td>sam</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>사</td>
-            <td>sa</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>오</td>
-            <td>o</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>육</td>
-            <td>yuk</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>칠</td>
-            <td>chil</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>팔</td>
-            <td>pal</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>구</td>
-            <td>gu</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>십</td>
-            <td>sip</td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>백</td>
-            <td>baek</td>
-          </tr>
-          <tr>
-            <td>1,000</td>
-            <td>천</td>
-            <td>cheon</td>
-          </tr>
-          <tr>
-            <td>10,000</td>
-            <td>만</td>
-            <td>man</td>
-          </tr>
-          <tr>
-            <td>100 million</td>
-            <td>억</td>
-            <td>eok</td>
-          </tr>
-          <tr>
-            <td>1 trillion</td>
-            <td>조</td>
-            <td>jo</td>
-          </tr>
+          {SinoNumbers.map((n) => (
+            <tr>
+              <td className={styles.right}>{n.number}</td>
+              <td>
+                {n.hangul} <span>({hangulRomanization.convert(n.hangul)})</span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
+
       <h2>Notes</h2>
       <div className={styles.notes}>
         <p>
