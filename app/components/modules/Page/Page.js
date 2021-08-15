@@ -34,7 +34,7 @@ export default function Page({ children, className, title, header, ...props }) {
       <Head>
         <title>{title && title + " - "}Counting in Korean</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="minimum-scale=1" />
+        {/* <meta name="viewport" content="width=device-width" /> */}
       </Head>
 
       {header && (

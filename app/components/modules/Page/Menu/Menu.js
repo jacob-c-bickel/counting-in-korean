@@ -26,7 +26,7 @@ export default function Menu({ show, setShow }) {
       <div className={styles.Menu + " " + classes}>
         <Link href="/" scroll={false}>
           <a className={styles.title} onClick={handleLinkClick} tabIndex="0">
-            Counting in Korean!
+            {"{ counting in korean }"}
           </a>
         </Link>
         <p className={styles.subtitle}>Practice</p>
