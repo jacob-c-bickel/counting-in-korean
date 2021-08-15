@@ -10,7 +10,7 @@ export default function CounterReference() {
       <h2>Notes</h2>
       <div className={styles.notes}>
         <p>
-          When counting things in Korean, a counter word in included after the number. This word
+          When counting things in Korean, a counter word is included after the number. This word
           changes based on what is being counted. The general word order is noun &rarr; number
           &rarr; counter.
           <br />
